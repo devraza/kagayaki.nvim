@@ -26,7 +26,6 @@ local theme = lush(function(injected_functions)
     -- lCursor        { }, -- Character under the cursor when |language-mapping| is used (see 'guicursor')
     -- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
     -- CursorColumn   { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
-    -- CursorLine     { }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     -- Directory      { }, -- Directory names (and other special names in listings)
     -- DiffAdd        { }, -- Diff mode: Added line |diff.txt|
     -- DiffChange     { }, -- Diff mode: Changed line |diff.txt|
@@ -35,7 +34,7 @@ local theme = lush(function(injected_functions)
     -- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
     -- TermCursor     { }, -- Cursor in a focused terminal
     -- TermCursorNC   { }, -- Cursor in an unfocused terminal
-    -- ErrorMsg       { }, -- Error messages on the command line
+    ErrorMsg       { fg = hsl("#f06969") }, -- Error messages on the command line
     -- VertSplit      { }, -- Column separating vertically split windows
     -- Folded         { }, -- Line used for closed folds
     -- FoldColumn     { }, -- 'foldcolumn'
@@ -55,6 +54,7 @@ local theme = lush(function(injected_functions)
     Normal         { bg = hsl("#151517"), fg = hsl("#ece5ea") }, -- Normal text
     LineNr         { fg = hsl("#454449") }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     NonText        { fg = Normal.bg.lighten(20) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    CursorLine     { bg = Normal.bg.lighten(5) }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     -- NormalFloat    { }, -- Normal text in floating windows.
     -- FloatBorder    { }, -- Border of floating windows.
     -- FloatTitle     { }, -- Title of floating windows.
@@ -75,9 +75,9 @@ local theme = lush(function(injected_functions)
     -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
     -- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
     -- SpellRare      { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
-    -- StatusLine     { }, -- Status line of current window
+    StatusLine     { bg = Normal.bg.lighten(10) }, -- Status line of current window
     -- StatusLineNC   { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
-    -- TabLine        { }, -- Tab pages line, not active tab page label
+    TabLine        { bg = Normal.bg.lighten(5), fg = Normal.fg.lighten(5) }, -- Tab pages line, not active tab page label
     -- TabLineFill    { }, -- Tab pages line, where there are no labels
     -- TabLineSel     { }, -- Tab pages line, active tab page label
     -- Title          { }, -- Titles for output from ":set all", ":autocmd" etc.
