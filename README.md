@@ -1,4 +1,4 @@
-Particle for Neovim
+Kagayaki for Neovim
 ===
 
 Under construction.
