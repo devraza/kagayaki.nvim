@@ -36,7 +36,6 @@ local theme = lush(function(injected_functions)
     -- TermCursorNC   { }, -- Cursor in an unfocused terminal
     ErrorMsg       { fg = hsl("#f06969") }, -- Error messages on the command line
     -- VertSplit      { }, -- Column separating vertically split windows
-    -- Folded         { }, -- Line used for closed folds
     -- FoldColumn     { }, -- 'foldcolumn'
     SignColumn     { }, -- Column where |signs| are displayed
     -- IncSearch      { }, -- 'incsearch' highlighting; also used for the text replaced with ":s///c"
@@ -52,6 +51,7 @@ local theme = lush(function(injected_functions)
     -- MsgSeparator   { }, -- Separator for scrolled messages, `msgsep` flag of 'display'
     -- MoreMsg        { }, -- |more-prompt|
     Normal         { bg = hsl("#151517"), fg = hsl("#ece5ea") }, -- Normal text
+    Folded         { }, -- Line used for closed folds
     LineNr         { fg = hsl("#454449") }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
     NonText        { fg = Normal.bg.lighten(20) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     CursorLine     { bg = Normal.bg.lighten(5) }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
