@@ -53,20 +53,20 @@ local theme = lush(function(injected_functions)
     Normal         { bg = hsl("#151517"), fg = hsl("#ece5ea") }, -- Normal text
     Folded         { }, -- Line used for closed folds
     LineNr         { fg = hsl("#454449") }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    NonText        { fg = Normal.bg.lighten(20) }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText        { fg = Normal.bg }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     CursorLine     { bg = Normal.bg.lighten(5) }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     NormalFloat    { bg = Normal.bg, fg = Normal.fg }, -- Normal text in floating windows.
     -- FloatBorder    { }, -- Border of floating windows.
     FloatTitle     { fg = hsl("#e887bb"), gui = "bold" }, -- Title of floating windows.
     -- NormalNC       { }, -- normal text in non-current windows
     Pmenu          { bg = Normal.bg, fg = Normal.fg}, -- Popup menu: Normal item.
-    -- PmenuSel       { }, -- Popup menu: Selected item.
+    PmenuSel       { bg = Normal.bg.lighten(10) }, -- Popup menu: Selected item.
     -- PmenuKind      { }, -- Popup menu: Normal item "kind"
     -- PmenuKindSel   { }, -- Popup menu: Selected item "kind"
     -- PmenuExtra     { }, -- Popup menu: Normal item "extra text"
     -- PmenuExtraSel  { }, -- Popup menu: Selected item "extra text"
-    -- PmenuSbar      { }, -- Popup menu: Scrollbar.
-    -- PmenuThumb     { }, -- Popup menu: Thumb of the scrollbar.
+    PmenuSbar      { bg = Normal.bg.lighten(5) }, -- Popup menu: Scrollbar.
+    PmenuThumb     { bg = hsl("#a292e8") }, -- Popup menu: Thumb of the scrollbar.
     -- Question       { }, -- |hit-enter| prompt and yes/no questions
     -- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search         { fg = hsl("#78b9c4"), gui = "bold underline" }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
