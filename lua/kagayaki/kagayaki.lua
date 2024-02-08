@@ -53,7 +53,7 @@ local theme = lush(function(injected_functions)
     Normal         { bg = hsl("#151517"), fg = hsl("#ece5ea") }, -- Normal text
     Folded         { }, -- Line used for closed folds
     LineNr         { fg = hsl("#454449") }, -- Line number for ":number" and ":#" commands, and when 'number' or 'relativenumber' option is set.
-    NonText        { fg = Normal.bg }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
+    NonText        { fg = hsl("#454449") }, -- '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text (e.g., ">" displayed when a double-wide character doesn't fit at the end of the line). See also |hl-EndOfBuffer|.
     CursorLine     { bg = Normal.bg.lighten(5) }, -- Screen-line at the cursor, when 'cursorline' is set. Low-priority if foreground (ctermfg OR guifg) is not set.
     NormalFloat    { bg = Normal.bg, fg = Normal.fg }, -- Normal text in floating windows.
     -- FloatBorder    { }, -- Border of floating windows.
