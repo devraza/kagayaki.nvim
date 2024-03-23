@@ -27,10 +27,10 @@ local theme = lush(function(injected_functions)
     -- CursorIM       { }, -- Like Cursor, but used when in IME mode |CursorIM|
     -- CursorColumn   { }, -- Screen-column at the cursor, when 'cursorcolumn' is set.
     Directory      { fg = hsl("#a292e8") }, -- Directory names (and other special names in listings)
-    DiffAdd        { bg = hsl("#78b9c4").darken(10) }, -- Diff mode: Added line |diff.txt|
-    DiffChange     { bg = hsl("#a292e8").darken(10) }, -- Diff mode: Changed line |diff.txt|
-    DiffDelete     { bg = hsl("#f06969").darken(10) }, -- Diff mode: Deleted line |diff.txt|
-    DiffText       { gui = "bold underline" }, -- Diff mode: Changed text within a changed line |diff.txt|
+    -- DiffAdd        { }, -- Diff mode: Added line |diff.txt|
+    -- DiffChange     { }, -- Diff mode: Changed line |diff.txt|
+    -- DiffDelete     { }, -- Diff mode: Deleted line |diff.txt|
+    -- DiffText       { }, -- Diff mode: Changed text within a changed line |diff.txt|
     -- EndOfBuffer    { }, -- Filler lines (~) after the end of the buffer. By default, this is highlighted like |hl-NonText|.
     -- TermCursor     { }, -- Cursor in a focused terminal
     -- TermCursorNC   { }, -- Cursor in an unfocused terminal
@@ -80,7 +80,7 @@ local theme = lush(function(injected_functions)
     TabLine        { bg = Normal.bg.lighten(5), fg = Normal.fg.lighten(5) }, -- Tab pages line, not active tab page label
     -- TabLineFill    { }, -- Tab pages line, where there are no labels
     -- TabLineSel     { }, -- Tab pages line, active tab page label
-    Title          { fg = Normal.fg, gui = "bold" }, -- Titles for output from ":set all", ":autocmd" etc.
+    -- Title          { }, -- Titles for output from ":set all", ":autocmd" etc.
     Visual         { bg = Normal.bg.lighten(10), fg = Normal.fg.saturate(50).darken(10) }, -- Visual mode selection
     -- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg     { fg = hsl("#f06969") }, -- Warning messages
