@@ -71,10 +71,6 @@ local theme = lush(function(injected_functions)
     -- QuickFixLine   { }, -- Current |quickfix| item in the quickfix window. Combined with |hl-CursorLine| when the cursor is there.
     Search         { fg = hsl("#78b9c4"), gui = "bold underline" }, -- Last search pattern highlighting (see 'hlsearch'). Also used for similar items that need to stand out.
     -- SpecialKey     { }, -- Unprintable characters: text displayed differently from what it really is. But not 'listchars' whitespace. |hl-Whitespace|
-    -- SpellBad       { }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
-    -- SpellCap       { }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
-    -- SpellLocal     { }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
-    -- SpellRare      { }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
     StatusLine     { bg = Normal.bg.lighten(5), fg = hsl("#7ee6ae") }, -- Status line of current window
     -- StatusLineNC   { }, -- Status lines of not-current windows. Note: If this is equal to "StatusLine" Vim will use "^^^" in the status line of the current window.
     TabLine        { bg = Normal.bg.lighten(5), fg = Normal.fg.lighten(5) }, -- Tab pages line, not active tab page label
@@ -85,6 +81,11 @@ local theme = lush(function(injected_functions)
     -- VisualNOS      { }, -- Visual mode selection when vim is "Not Owning the Selection".
     WarningMsg     { fg = hsl("#f06969") }, -- Warning messages
     -- Whitespace     { }, -- "nbsp", "space", "tab" and "trail" in 'listchars'
+    SpellBad       { sp = WarningMsg.fg, gui = "undercurl" }, -- Word that is not recognized by the spellchecker. |spell| Combined with the highlighting used otherwise.
+    SpellCap       { sp = Search.fg, gui = "undercurl" }, -- Word that should start with a capital. |spell| Combined with the highlighting used otherwise.
+    SpellLocal     { sp = StatusLine.fg, gui = "undercurl" }, -- Word that is recognized by the spellchecker as one that is used in another region. |spell| Combined with the highlighting used otherwise.
+    SpellRare      { sp = FloatTitle.fg, gui = "undercurl" }, -- Word that is recognized by the spellchecker as one that is hardly ever used. |spell| Combined with the highlighting used otherwise.
+
    Winseparator   { fg = hsl("#454449") }, -- Separator between window splits. Inherts from |hl-VertSplit| by default, which it will replace eventually.
     -- WildMenu       { }, -- Current match in 'wildmenu' completion
     -- WinBar         { }, -- Window bar of current window
