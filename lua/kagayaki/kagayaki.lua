@@ -94,7 +94,7 @@ local theme = lush(function(injected_functions)
     Comment        { fg = hsl("#5c5c61") }, -- Any comment
 
     Constant       { fg = hsl("#d9d564") }, -- (*) Any constant
-    -- String         { }, --   A string constant: "this is a string"
+    String         { fg = Constant.fg }, --   A string constant: "this is a string"
     -- Character      { }, --   A character constant: 'c', '\n'
     -- Number         { }, --   A number constant: 234, 0xff
     -- Boolean        { }, --   A boolean constant: TRUE, false
